@@ -1,0 +1,32 @@
+/*
+Theme Name:       BBoilerplate Theme
+Theme URI:        http://brambronswijk.com/bboilerplate/
+GitHub Theme URI: bbronswijk/boilerplate
+Description:      Standaard theme bronswijk
+Author:           Bram Bronswijk   
+Author URI:       http://brambronswijk.com
+Version:          0.5
+License:          GNU General Public License v2 or later
+License URI:      http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* BASE - Base styles, variables, mixins, etc */
+@import 'base/_variables.scss';
+//@import 'base/_fonts.scss';
+@import 'base/_mixins.scss';
+@import 'base/_base.scss';
+@import 'base/_typography.scss';
+
+/* LAYOUTS - Page layout styles */
+@import 'layout/_footer.scss';
+@import 'layout/_header.scss';
+@import 'layout/_jumbotron.scss';
+@import 'layout/_page.scss';
+@import 'layout/_sidebar.scss';
+
+
+/* MODULES - Individual site components */
+@import 'modules/_call_to_action.scss';
+@import 'modules/_services.scss';
+@import 'modules/_tinyMCE.scss';
+

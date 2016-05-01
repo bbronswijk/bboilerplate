@@ -1,0 +1,139 @@
+// header
+
+header{
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  
+  .header{        
+    background: $primary-color;
+    height: 50px;
+    padding: 12px;
+    z-index: 5;
+    
+    a{
+      padding: 10px 0;
+      &:hover{
+        text-decoration: none;
+      }
+      span{
+        font-size: 14px;
+        color: #fff;
+      }
+      i{
+        font-size: 14px;
+        color: #fff;
+        margin: 0 8px;
+      }
+    }
+  }
+  .navbar{
+    margin-bottom: 0;
+    background: #fff;
+    padding: 15px 15px;
+    
+    .logo-link{
+      vertical-align: middle;
+      height: 100px;
+      max-width: 400px;
+      box-sizing: content-box;
+      .helper{
+        height: 100%;
+        vertical-align: middle;
+        display: inline-block;
+      }
+      .header-logo{
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 100%;
+        
+        width: auto;
+        max-height: 100px; 
+        height: auto;
+      }
+    }
+    nav{
+      margin: 25px 0;
+    }
+    .current-menu-item{
+        background: $primary-color;
+        border-radius: 20px;
+        
+        &:hover a{
+          color: #fff !important;
+        }
+        
+        a{
+          color: #fff !important;
+        }
+    }
+    
+    li{
+      color: #fff;
+      margin: 7px;
+      
+      &:hover a{        
+        color: #fff !important;
+      }
+      
+      &:hover{
+        border-radius: 20px;
+        background: $primary-color;        
+      }
+      
+      a{
+        padding: 8px 15px;
+      } 
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      //height: 82px;
+      padding: 15px;
+    }
+  }
+}
+
+
+        
+body.admin-bar header{
+  top: 32px;
+  
+  @media screen and (max-width: $breakpoint-wp) {
+    top: 46px;
+  }
+}
+        
+.navbar-collapse.collapse, .navbar-collapse.collapsing {
+  @media screen and (max-width: $breakpoint-sm) {
+    position: fixed;
+    background: hsla(1,0%,100%,.9);
+    top: 96px;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    max-height: none;
+    padding: 70px 20% 0 20%;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    top: 90px;
+  }
+  
+  .menu-item{
+    @media screen and (max-width: $breakpoint-sm) {
+      border-bottom: 1px solid #e3e3e3;
+    }
+  }
+  
+  .menu-item:first-child{
+    @media screen and (max-width: $breakpoint-sm) {
+      border-top: 1px solid #e3e3e3;
+    }
+  }
+}        
+     
+#wpadminbar{
+  @media screen and (max-width: $breakpoint-wp) {
+    position: fixed;
+  }
+}

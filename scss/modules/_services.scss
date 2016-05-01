@@ -1,0 +1,28 @@
+// SERVICES
+#services{
+  text-align: center;
+    
+  .service-icon{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px auto;
+    border: 2px solid #999;
+    border-radius: 50%;
+    &:hover{
+      background: #999;
+      i{
+        color: #fff;  
+      }
+    }
+    
+    i{
+      margin: 30px;
+      font-size: 40px;
+    }
+  } 
+  
+  h1.service-title{
+    font-weight: bold;
+    font-size: 24px;
+  } 
+}

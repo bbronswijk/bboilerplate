@@ -1,0 +1,26 @@
+// settings colors | should only be used inside this file
+$color-dark: #31383E; // dark grey
+$color-light: #c3c3c3; // grey
+//$color-blue: #273469; 
+$color-blue: #394B6F;
+$color-red: #F44336;
+
+// general colors | can be used outside this file
+$primary-color:  $color-red;
+$primary-color:  $color-blue;
+
+// breakpoints
+$breakpoint-wp: 782px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
+
+// backgrounds
+//$background-blue: #f1f4f7;
+//$background-grey: #f8f3f0;
+//$background-dark: $color-dark;
+
+// layouts
+// functions
+$text-color: $color-dark;
+$text-color-light: $color-light;
+$text-main-font: 'Open Sans', sans-serif;
