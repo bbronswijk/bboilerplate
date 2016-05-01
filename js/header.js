@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
 	/* SCROLLING */
 	$header = $('header');
 	$adminbar = $('#wpadminbar');
-	$logo = $header.find('.logo-link');
+	$logoLink = $header.find('.logo-link');
 	$nav = $header.find('#navbar');
 	
 	maxScroll = 75;
@@ -34,14 +34,14 @@ jQuery(document).ready(function($) {
 					if($(window).width() > 768 ){
 						$header.animate({top: offsetTop - 50 +'px'},200);
 						$nav.animate({margin: '10px 0'},200);
-						$logo.animate({height: '70px'},200);
+						$logoLink.animate({height: '70px'},200);
 					}				
 				}
 			} else {
 				if (positionHeader != offsetTop) {
 					$header.animate({top: offsetTop + 'px'},200);
 					$nav.animate({margin: '25px 0'},200);
-					$logo.animate({height: '100px'},200);
+					$logoLink.animate({height: '100px'},200);
 				}
 			}
 

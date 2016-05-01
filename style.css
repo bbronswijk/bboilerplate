@@ -219,7 +219,7 @@ header {
         vertical-align: middle;
         max-width: 100%;
         width: auto;
-        max-height: 100px;
+        max-height: 100%;
         height: auto; }
     header .navbar nav {
       margin: 25px 0; }
