@@ -86,7 +86,7 @@
 	// GitHub Updater
 	// add personal access token
 	add_filter( 'github_updater_token_distribution', function (){
-        return array( 'bboilerplate' => 'ad7d38ac2a719f549ff1e959158efab380bb3a52' );
+        return array( 'bboilerplate' => 'e5cf1afc6f1ac882981e9436d458137dd656b3ac' );
     });
 	 	
 	// hide option page github update
