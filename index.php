@@ -12,10 +12,6 @@
 				
 			<?php endif; ?>
 			
-			<div class="col-md-4">	
-				<?php get_sidebar('default'); ?>	
-			</div>
-			
 			<?php if ( have_posts() ) : 
 							
 				while ( have_posts() ) : the_post(); ?>
@@ -28,6 +24,9 @@
 				
 			<?php endif; ?>
 			
+			<div class="sidebar col-md-4">	
+				<?php get_sidebar('default'); ?>	
+			</div>
 			
 		</div>
 	</div><!-- container --> 

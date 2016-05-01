@@ -302,7 +302,8 @@ body.admin-bar header {
   .page-wrapper .content {
     padding: 30px 40px;
     background: #fff;
-    border: 2px solid #e9e9e9; }
+    border: 2px solid #e9e9e9;
+    margin-bottom: 15px; }
   .page-wrapper .page-title {
     font-size: 36px;
     line-height: 1em;
@@ -324,6 +325,10 @@ body.admin-bar header {
   .home .page-wrapper .content {
     border: none; }
 
+@media screen and (max-width: 992px) {
+  .sidebar {
+    padding-left: 0;
+    padding-right: 0; } }
 .sidebar .widget {
   background: #fff;
   padding: 20px 20px 15px 20px;

@@ -47,13 +47,21 @@
 	
 	// register 
 	require_once('inc/dashboard.php');
+	
+	// register 
+	require_once('inc/sidebar-option.php');
 		
 	//register sidebars
 	if ( function_exists('register_sidebar') ){
 		register_sidebar(array(
-		  'name' 		=> __( 'default' ),
+		  'name' 		=> __( 'Default Sidebar', 'my-theme' ),
 		  'id' 			=> 'default',
 		  'description' => __( 'Default sidebar', 'my-theme' ),
+		));
+		register_sidebar(array(
+		  'name' 		=> __( 'Alternative Default ', 'my-theme' ),
+		  'id' 			=> 'default-alternative',
+		  'description' => __( 'Alternative Default sidebar', 'my-theme' ),
 		));
 		register_sidebar(array(
 		  'name' 			=> __( 'footer' ),
