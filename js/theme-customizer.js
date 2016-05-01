@@ -3,25 +3,35 @@
  */
 ( function( $ ) {
 	
+	$jumbotron = $('.jumbotron');
+	
 	// banner image
 	wp.customize( 'banner_image', function( value ) {
 		value.bind( function( newval ) {			
-			$('.jumbotron').css('background-image', 'url('+newval+')' );
+			$jumbotron.css('background-image', 'url('+newval+')' );
 		} );
 	} );
 	
 	// image position
 	wp.customize( 'banner_position', function( value ) {
 		value.bind( function( newval ) {			
-			$('.jumbotron').css('background-position', newval );
+			$jumbotron.css('background-position', newval );
 		} );
 	} );
 		
 	// text color banner
 	wp.customize( 'banner_textcolor', function( value ) {
 		value.bind( function( newval ) {
-			$('.jumbotron').find('h1').css('color', newval  );
-			$('.jumbotron').find('p').css('color', newval  );
+			$jumbotron.find('h1').css('color', newval  );
+			$jumbotron.find('p').css('color', newval  );
+		} );
+	} );
+	
+	// text color banner
+	wp.customize( 'banner_textshadow', function( value ) {
+		value.bind( function( newval ){
+			$jumbotron.find('h1').css('text-shadow', 'none'  );
+			$jumbotron.find('p').css('text-shadow', 'none'  );
 		} );
 	} );
 	

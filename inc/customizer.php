@@ -81,6 +81,13 @@ class MyTheme_Customize {
          ) 
       );   
 	  
+	  $wp_customize->add_setting( 'banner_textshadow', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+         array(
+            'default' => 'none', //Default setting/value to save
+            'type' => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
+         ) 
+      );  
+	  
 	  $wp_customize->add_setting( 'promo_email', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
          array(
             'default' => 'promo@website.com', //Default setting/value to save
@@ -165,6 +172,20 @@ class MyTheme_Customize {
 					'top'  => 'top',
 					'center'  => 'center',
 					'bottom' => 'bottom'
+				),
+			)
+		);
+		
+		$wp_customize->add_control(
+			'banner-textshadow', 
+			array(
+				'label'    => __( 'Text Shadow', 'mytheme' ),
+				'section'  => 'banner_section',
+				'settings' => 'banner_textshadow',
+				'type'     => 'radio',
+				'choices'  => array(
+					'none'  => 'none',
+					'2px 2px 0px #707070'  => 'black',
 				),
 			)
 		);
@@ -282,6 +303,8 @@ class MyTheme_Customize {
            <?php self::generate_css('.jumbotron', 'background-position', 'banner_position'); ?> 
            <?php self::generate_css('.jumbotron h1', 'color', 'banner_textcolor'); ?> 
            <?php self::generate_css('.jumbotron p', 'color', 'banner_textcolor'); ?> 
+           <?php self::generate_css('.jumbotron h1', 'text-shadow', 'banner_textshadow'); ?> 
+           <?php self::generate_css('.jumbotron p', 'text-shadow', 'banner_textshadow'); ?> 
       </style> 
       <!--/Customizer CSS-->
       <?php
