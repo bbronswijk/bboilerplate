@@ -15,23 +15,41 @@
 }
 
 .inline-full-width{
-  box-sizing: content-box;
-  width: calc( ( 1200px * 0.6667 ) - 70px );
-  margin-left: calc( ( ( ( 100vw - 1200px ) / 2 ) + 417px ) * -1 );
-  padding-left: calc( ( ( 100vw - 1200px ) / 2 ) + 417px );
-  padding-right: calc( ( ( 100vw - 1200px ) / 2 ) + 36px );
   
-  @media screen and (max-width: $breakpoint-md) {  
-    width: calc( ( 970px * 0.6667 ) - 70px );
-    margin-left: calc( ( ( ( 100vw - 970px ) / 2 ) + 132px ) * -1 );
-    padding-left: calc( ( ( 100vw - 970px ) / 2 ) + 132px );
-    padding-right: calc( ( ( 100vw - 970px ) / 2 ) + 131px );
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-position: center;
+  background-size: cover;
+  
+  box-sizing: content-box;
+  // same width as content
+  width: 1060px;
+  margin-left: calc( ( ( ( 100vw - 1140px ) / 2 ) + 45px ) * -1 );
+  padding-left: calc( ( ( 100vw - 1140px ) / 2 ) + 45px );
+  padding-right: calc( ( ( 100vw - 1140px ) / 2 ) + 45px );
+  
+  @media screen and (max-width: $breakpoint-lg) {  
+    width: 860px;
+    margin-left: calc( ( ( ( 100vw - 940px ) / 2 ) + 45px ) * -1 );
+    padding-left: calc( ( ( 100vw - 940px ) / 2 ) + 45px );
+    padding-right: calc( ( ( 100vw - 940px ) / 2 ) + 45px );
   }
-  @media screen and (max-width: $breakpoint-sm) {
-    width: calc( ( 720px * 0.6667 ) - 70px );
-    margin-left: calc( ( ( ( 100vw - 750px ) / 2 ) + 117px ) * -1 );
-    padding-left: calc( ( ( 100vw - 750px ) / 2 ) + 117px );
-    padding-right: calc( ( ( 100vw - 750px ) / 2 ) + 36px );
+  
+  @media screen and (max-width: $breakpoint-md) {
+    width: 640px;
+    margin-left: calc( ( ( ( 100vw - 750px ) / 2 ) + 45px ) * -1 );
+    padding-left: calc( ( ( 100vw - 750px ) / 2 ) + 45px );
+    padding-right: calc( ( ( 100vw - 750px ) / 2 ) + 45px );
+  }
+  
+  @media screen and (max-width: $breakpoint-sm) {  
+    width: 100%;
+    margin-left: -55px;
+    padding-left: 55px;
+    padding-right: 55px;
   }
   
 }

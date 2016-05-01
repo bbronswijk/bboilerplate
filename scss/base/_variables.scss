@@ -13,6 +13,7 @@ $primary-color:  $color-blue;
 $breakpoint-wp: 782px;
 $breakpoint-sm: 768px;
 $breakpoint-md: 992px;
+$breakpoint-lg: 1200px;
 
 // backgrounds
 //$background-blue: #f1f4f7;
@@ -24,3 +25,5 @@ $breakpoint-md: 992px;
 $text-color: $color-dark;
 $text-color-light: $color-light;
 $text-main-font: 'Open Sans', sans-serif;
+
+//@include crossBrowser(transform,scale(1,1) );
