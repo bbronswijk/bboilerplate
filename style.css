@@ -395,7 +395,8 @@ body.admin-bar header {
     border: 2px solid #999;
     border-radius: 50%; }
     #services .service-icon:hover {
-      background: #999; }
+      background: #394B6F;
+      border: 2px solid #394B6F; }
       #services .service-icon:hover i {
         color: #fff; }
     #services .service-icon i {
