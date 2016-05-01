@@ -2,7 +2,7 @@
 .page-wrapper{
   background: #f9f9f9;
   min-height: calc( 100vh - 644px ); 
-  margin-top: 180px;
+  padding-top: 180px;
   padding-bottom: 50px;
   
   .content{
@@ -33,6 +33,7 @@
 .home .page-wrapper{
   margin-top: 20px;
   background: #fff;
+  padding-top: 0px;
   .content{
     border: none;
   }
