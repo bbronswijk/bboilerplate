@@ -86,8 +86,42 @@ class MyTheme_Customize {
             'default' => 'none', //Default setting/value to save
             'type' => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
          ) 
+      ); 
+	  
+	  $wp_customize->add_setting( 'banner_headline', 
+         array(
+            'default' => 'Headline', 
+            'type' => 'theme_mod',
+            'transport' => 'postMessage',  
+         ) 
       );  
 	  
+	  $wp_customize->add_setting( 'banner_subtitle', 
+         array(
+            'default' => 'Curabitur luctus lacus et lectus dictum ornare.', 
+            'type' => 'theme_mod',
+            'transport' => 'postMessage'  
+         ) 
+      );   
+	  
+	  $wp_customize->add_setting( 'banner_text_btn', 
+         array(
+            'default' => 'Read More', 
+            'type' => 'theme_mod',
+            'transport' => 'postMessage'  
+         ) 
+      );  
+	  
+	  $wp_customize->add_setting( 'banner_btn_url', 
+         array(
+            'default' => '#', 
+            'type' => 'theme_mod',
+            'transport' => 'postMessage'  
+         ) 
+      );   
+	    
+	  
+	  // CONTACT HEADER
 	  $wp_customize->add_setting( 'promo_email', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
          array(
             'default' => 'promo@website.com', //Default setting/value to save
@@ -104,6 +138,7 @@ class MyTheme_Customize {
          ) 
       );  
 	  
+	  // SOCIAL MEDIA
 	  $wp_customize->add_setting( 'facebook-url', 
          array(
             'type' => 'option'
@@ -150,6 +185,7 @@ class MyTheme_Customize {
 			)
 		);
       
+	  // BANNER
       $wp_customize->add_control( new WP_Customize_Image_Control( 
          $wp_customize, //Pass the $wp_customize object (required)
          'mytheme_link_textcolor', //Set a unique ID for the control
@@ -160,6 +196,50 @@ class MyTheme_Customize {
             'priority' => 10, //Determines the order this control appears in for the specified section
          ) 
       ) );
+	  
+	  $wp_customize->add_control( new WP_Customize_Control( 
+         $wp_customize, 
+         'banner_headline',
+         array(
+            'label' => __( 'Headline', 'mytheme' ), 
+            'section' => 'banner_section', 
+            'settings' => 'banner_headline', 
+            'priority' => 10
+         ) 
+	  ) );
+	  
+	  $wp_customize->add_control( new WP_Customize_Control( 
+         $wp_customize, 
+         'banner_subtitle',
+         array(
+            'label' => __( 'Subtitle', 'mytheme' ), 
+            'section' => 'banner_section', 
+            'settings' => 'banner_subtitle', 
+            'priority' => 10
+         ) 
+	  ) );
+	  
+	  $wp_customize->add_control( new WP_Customize_Control( 
+         $wp_customize, 
+         'banner_text_btn',
+         array(
+            'label' => __( 'Text Button', 'mytheme' ), 
+            'section' => 'banner_section', 
+            'settings' => 'banner_text_btn', 
+            'priority' => 10
+         ) 
+	  ) );
+	  
+	  $wp_customize->add_control( new WP_Customize_Control( 
+         $wp_customize, 
+         'banner_btn_url',
+         array(
+            'label' => __( 'Button redirect URL', 'mytheme' ), 
+            'section' => 'banner_section', 
+            'settings' => 'banner_btn_url', 
+            'priority' => 10
+         ) 
+	  ) );
 	  
 	  $wp_customize->add_control(
 			'position', 
@@ -175,7 +255,7 @@ class MyTheme_Customize {
 				),
 			)
 		);
-		
+				
 		$wp_customize->add_control(
 			'banner-textshadow', 
 			array(
@@ -189,8 +269,7 @@ class MyTheme_Customize {
 				),
 			)
 		);
-		
-		
+				
 	  $wp_customize->add_control( new WP_Customize_Color_Control( 
          $wp_customize, 
          'banner_textcolor', 
@@ -202,7 +281,7 @@ class MyTheme_Customize {
          ) 
       ) );
 		
-		
+	  // contact info
 	  $wp_customize->add_control( new WP_Customize_Control( 
          $wp_customize, //Pass the $wp_customize object (required)
          'promo_email', //Set a unique ID for the control
@@ -225,6 +304,7 @@ class MyTheme_Customize {
          ) 
 	  ) );
 	  
+	  // social media
 	  $wp_customize->add_control( new WP_Customize_Control( 
          $wp_customize, 
          'facebook-url',

@@ -12,6 +12,24 @@
 		} );
 	} );
 	
+	wp.customize( 'banner_headline', function( value ) {		
+		value.bind( function( newval ) {	
+			$jumbotron.find('h1').text( newval );
+		});
+	});
+	
+	wp.customize( 'banner_subtitle', function( value ) {
+		value.bind( function( newval ) {			
+			$jumbotron.find('p').text( newval );
+		} );
+	} );
+	
+	wp.customize( 'banner_text_btn', function( value ) {
+		value.bind( function( newval ) {			
+			$jumbotron.find('a').text( newval );
+		} );
+	} );
+	
 	// image position
 	wp.customize( 'banner_position', function( value ) {
 		value.bind( function( newval ) {			

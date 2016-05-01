@@ -65,12 +65,9 @@
 		<?php if(is_front_page()): ?>
 		<div class="jumbotron">
 			<div class="container">
-				<h1 class="animated fadeInUp">Bootstrap Tutorial</h1>
-				<p class="animated fadeInUp">
-					Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive,
-					mobile-first projects on the web.
-				</p>
-				<button class="btn btn-primary btn-lg animated fadeInUp" style="margin-top: 30px;">learn more</button>
+				<h1 class="animated fadeInUp"><?php echo get_theme_mod( 'banner_headline', 'Headline' ); ?></h1>
+				<p class="animated fadeInUp"><?php echo get_theme_mod( 'banner_subtitle', 'Curabitur luctus lacus et lectus dictum ornare.' ); ?></p>
+				<a href="<?php echo get_theme_mod( 'banner_btn_url', '#' ); ?>" class="btn btn-primary btn-lg animated fadeInUp" style="margin-top: 30px;"><?php echo get_theme_mod( 'banner_text_btn', 'Read More' ); ?></a>
 			</div>
 		</div>
 		<?php endif; ?>

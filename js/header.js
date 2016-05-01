@@ -3,8 +3,9 @@
  */
 jQuery(document).ready(function($) {
 	
-	/* ADD FOOTER WIDGETS BOOTSTRAP CLASSES */
-	$('.jumbotron').find('p,h1,.btn').delay(500).show();
+	$jumbotron = $('.jumbotron');
+	$jumbotron.find('p,h1').delay(500).show();
+	$jumbotron.find('.btn').delay(500).css('display','inline-block');
 	
 	/* SCROLLING */
 	$header = $('header');
