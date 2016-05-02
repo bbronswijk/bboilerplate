@@ -69,7 +69,7 @@ header{
         }
     }
     
-    li{
+    li.menu-item{
       color: #fff;
       margin: 7px;
       
@@ -87,7 +87,6 @@ header{
       } 
     }
     @media screen and (max-width: $breakpoint-sm) {
-      //height: 82px;
       padding: 15px;
     }
   }

@@ -234,15 +234,15 @@ header {
         color: #fff !important; }
       header .navbar .current-menu-item a {
         color: #fff !important; }
-    header .navbar li {
+    header .navbar li.menu-item {
       color: #fff;
       margin: 7px; }
-      header .navbar li:hover a {
+      header .navbar li.menu-item:hover a {
         color: #fff !important; }
-      header .navbar li:hover {
+      header .navbar li.menu-item:hover {
         border-radius: 20px;
         background: #394B6F; }
-      header .navbar li a {
+      header .navbar li.menu-item a {
         padding: 8px 15px; }
     @media screen and (max-width: 768px) {
       header .navbar {
@@ -488,5 +488,17 @@ body.admin-bar header {
       padding-top: 34px; }
     .pricing-table tbody.highlighted tr:last-child td {
       padding-bottom: 26px; }
+
+.qtranxs_language_chooser {
+  padding: 0;
+  float: right; }
+  .qtranxs_language_chooser li {
+    list-style: none;
+    float: left;
+    margin-right: 10px; }
+  @media screen and (max-width: 768px) {
+    .qtranxs_language_chooser {
+      float: left;
+      margin-top: -40px; } }
 
 /*# sourceMappingURL=style.css.map */

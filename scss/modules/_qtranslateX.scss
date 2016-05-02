@@ -1,0 +1,15 @@
+// qTranslate-X
+.qtranxs_language_chooser{
+  padding: 0;
+  float: right;
+    
+  li{
+    list-style: none;
+    float: left;
+    margin-right: 10px;
+  }
+  @media screen and (max-width: $breakpoint-sm) {
+    float: left;
+    margin-top: -40px;
+  }
+}

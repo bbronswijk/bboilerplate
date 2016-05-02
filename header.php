@@ -40,6 +40,7 @@
 			<nav class="navbar navbar-default navbar-static-top">
 				<div class="container">
 					<div class="navbar-header">
+						
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 							<span class="sr-only">Toggle navigation</span>
 							<span class="icon-bar"></span>
@@ -49,8 +50,11 @@
 						
 						<a class="logo-link pull-left hidden-xs hidden-sm " href="<?php echo home_url(); ?>">
 							<span class="helper"></span><img src="<?php header_image(); ?>" alt="logo" class="header-logo"/> 
-						</a>
+						</a>					
 					</div>
+					
+					<?php if( function_exists('qtranxf_generateLanguageSelectCode') ) echo qtranxf_generateLanguageSelectCode('image'); ?>
+					
 					<?php wp_nav_menu( array( 	'theme_location' => 'header-menu', 
 												'container_id' => 'navbar', 
 												'container_class' => 'navbar-collapse collapse pull-right', 
