@@ -78,6 +78,21 @@
 		} );
 	} );
 	
+	$calltoaction = $('.call-to-action');
+	
+	// call to action button
+	wp.customize( 'callto_btn_text', function( value ) {
+		value.bind( function( newval ) {			
+			$calltoaction.find('.call-btn').text( newval );
+		} );
+	} );
+	
+	// call to action 
+	wp.customize( 'callto_text', function( value ) {
+		value.bind( function( newval ) {			
+			$calltoaction.find('.call-title').text( newval );
+		} );
+	} );
 	
 	
 	

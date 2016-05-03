@@ -2,11 +2,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-7 ">
-					<div class="call-title">ARE YOU READY FOR AWESOMENESS? THIS IS CALL TO ACTION</div>
+					<div class="call-title"><?php echo get_theme_mod( 'callto_text', 'are you ready for some awesomeness?' ); ?></div>
 					
 				</div>
 				<div class="col-md-3 col-md-offset-1">
-					<a class="btn btn-primary btn-lg">PURCHASE NOW</a>
+					<a class="btn btn-primary btn-lg call-btn"><?php echo get_theme_mod( 'callto_text_btn', 'purchase now' ); ?></a>
 				</div>
 			</div>
 		</div>

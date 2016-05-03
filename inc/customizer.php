@@ -28,6 +28,14 @@ class MyTheme_Customize {
          ) 
       );
 	  
+	  $wp_customize->add_section( 'callto_section', 
+         array(
+            'title' => __( 'Call to Action', 'mytheme' ), //Visible title of section
+            'priority' => 45, //Determines what order this appears in
+            'description' => __('Allows you to customize the call to action bar at the bottom of the page', 'mytheme'), //Descriptive tooltip
+         ) 
+      );
+	  
 	  $wp_customize->add_section( 'social_section', 
          array(
             'title' => __( 'Social Media Icons', 'mytheme' ), //Visible title of section
@@ -118,7 +126,23 @@ class MyTheme_Customize {
             'type' => 'theme_mod',
             'transport' => 'postMessage'  
          ) 
-      );   
+      );  
+	  
+	  $wp_customize->add_setting( 'callto_text', 
+         array(
+            'default' => 'are you ready for awesomeness? this is a call to action', 
+            'type' => 'theme_mod',
+            'transport' => 'postMessage'  
+         ) 
+      );
+	  
+	  $wp_customize->add_setting( 'callto_btn_text', 
+         array(
+            'default' => 'purchase now', 
+            'type' => 'theme_mod',
+            'transport' => 'postMessage'  
+         ) 
+      );     
 	    
 	  
 	  // CONTACT HEADER
@@ -362,6 +386,28 @@ class MyTheme_Customize {
             'settings' => 'vimeo-url', 
             'priority' => 14, 
             'section' => 'social_section'
+         ) 
+	  ) );
+	  
+	  $wp_customize->add_control( new WP_Customize_Control( 
+         $wp_customize, 
+         'callto_text',
+         array(
+            'label' => __( 'Call to action', 'mytheme' ), 
+            'section' => 'callto_section', 
+            'settings' => 'callto_text', 
+            'priority' => 10
+         ) 
+	  ) );
+	  
+	  $wp_customize->add_control( new WP_Customize_Control( 
+         $wp_customize, 
+         'callto_btn_text',
+         array(
+            'label' => __( 'Button Text', 'mytheme' ), 
+            'section' => 'callto_section', 
+            'settings' => 'callto_btn_text', 
+            'priority' => 10
          ) 
 	  ) );
 		      

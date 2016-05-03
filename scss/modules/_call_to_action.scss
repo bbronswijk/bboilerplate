@@ -8,8 +8,13 @@
   box-sizing: content-box;
   text-align: center;
   .call-title{
+    text-transform: uppercase;
     font-weight: bold;
     margin: 10px 0;
+  }
+  
+  .call-btn{
+    text-transform: uppercase;
   }
  
 }

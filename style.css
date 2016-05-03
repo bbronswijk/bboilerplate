@@ -374,8 +374,11 @@ body.admin-bar header {
   box-sizing: content-box;
   text-align: center; }
   .call-to-action .call-title {
+    text-transform: uppercase;
     font-weight: bold;
     margin: 10px 0; }
+  .call-to-action .call-btn {
+    text-transform: uppercase; }
 
 .inline-full-width {
   color: #fff;
