@@ -22,13 +22,15 @@
       font-size: 20px;
       font-weight: bold;
       line-height: 1.5em;
-      &:before{
+      position: relative;
+      &:after{
         content: '';
+        left: 0;
         position: absolute;
         height: 5px;
         width: 60px;
         background: $primary-color;
-        margin-top: 30px;
+        bottom: -8px;
       }
     }
     

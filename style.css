@@ -347,14 +347,16 @@ body.admin-bar header {
     margin: 0 0 25px 0;
     font-size: 20px;
     font-weight: bold;
-    line-height: 1.5em; }
-    .sidebar .widget .widgettitle:before {
+    line-height: 1.5em;
+    position: relative; }
+    .sidebar .widget .widgettitle:after {
       content: '';
+      left: 0;
       position: absolute;
       height: 5px;
       width: 60px;
       background: #394B6F;
-      margin-top: 30px; }
+      bottom: -8px; }
   .sidebar .widget .textwidget {
     font-size: 0.95em; }
     .sidebar .widget .textwidget p {
