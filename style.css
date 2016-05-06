@@ -406,6 +406,7 @@ body.admin-bar header {
     text-transform: uppercase; }
 
 .inline-full-width {
+  clear: both;
   color: #fff;
   font-size: 24px;
   text-align: center;
@@ -482,11 +483,14 @@ body.admin-bar header {
       .pricing-table tbody tr td {
         padding: 30px; }
         .pricing-table tbody tr td span {
-          font-weight: bold;
-          font-size: 32px;
-          margin-right: 10px; }
+          font-size: 16px;
+          font-weight: normal;
+          margin-left: 10px; }
         .pricing-table tbody tr td i {
           color: #394B6F; }
+    .pricing-table tbody tr:nth-child(1) td {
+      font-weight: bold;
+      font-size: 32px; }
     .pricing-table tbody tr:nth-child(2) td {
       padding: 20px 30px;
       font-weight: bold;
