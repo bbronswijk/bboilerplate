@@ -77,7 +77,7 @@
 	
 	// custom admin login logo
 	function custom_login_logo() {
-		echo '<style type="text/css">	
+		echo '<style type="text/css">
 				h1 a {
 					 background-image: url('.get_header_image().') !important; 
 					 background-size: contain !important; 

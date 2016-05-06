@@ -16,7 +16,7 @@
 		   			<div class="row">
 			   			<div class="col-sm-9 col-xs-12">
 			   				<?php if( get_theme_mod('promo_email') ): ?>
-			   				<a href="mailto:info@rowcoaching.nl" target="_blank" style="margin-right: 30px;"><i class="fa fa-envelope-o" aria-hidden="true"></i><span class="header-email"><?php echo get_theme_mod( 'promo-email', 'promo@website.com' ); ?></span></a>
+			   				<a href="mailto:info@rowcoaching.nl" target="_blank" style="margin-right: 30px;"><i class="fa fa-envelope-o" aria-hidden="true"></i><span class="header-email"><?php echo get_theme_mod( 'promo_email', 'promo@website.com' ); ?></span></a>
 			   				<?php endif; if( get_theme_mod('promo_phone') ): ?>
 			   				<a href="tel:+31653621545" target="_blank"><i class="fa fa-phone" aria-hidden="true"></i><span class="header-phone"><?php echo get_theme_mod( 'promo_phone', '+31(0)12 345 67 82' ); ?></span></a>
 			   				<?php endif; ?>
