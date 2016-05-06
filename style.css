@@ -437,6 +437,15 @@ body.admin-bar header {
       padding-left: 55px;
       padding-right: 55px; } }
 
+.instagram-pics {
+  padding-left: 5%; }
+  .instagram-pics li {
+    list-style: none;
+    float: left;
+    width: 30%;
+    height: auto;
+    margin: 1px 2px; }
+
 #services {
   text-align: center;
   margin-bottom: 30px; }
