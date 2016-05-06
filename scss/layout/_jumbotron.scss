@@ -5,6 +5,30 @@
   margin-top: 90px;
   padding-top: 160px;
   overflow:hidden;
+  position: relative;
+  
+  .movie-container{
+    display: none;
+    position: absolute;
+    background: #000;
+    text-align: center;
+    width: 100%;
+    top: 90px;
+    
+    &:after{
+      content: '\f00d';
+      font-family: fontawesome;
+      color: #fff;
+      font-size: 22px;
+      position: absolute;
+      top: 6px; 
+      right: 10px;      
+    }
+    
+    &:hover{
+      cursor: pointer;
+    }
+  }
   
   h1{
     font-weight: 600;

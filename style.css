@@ -284,7 +284,25 @@ body.admin-bar header {
   height: 500px;
   margin-top: 90px;
   padding-top: 160px;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
+  .jumbotron .movie-container {
+    display: none;
+    position: absolute;
+    background: #000;
+    text-align: center;
+    width: 100%;
+    top: 90px; }
+    .jumbotron .movie-container:after {
+      content: '\f00d';
+      font-family: fontawesome;
+      color: #fff;
+      font-size: 22px;
+      position: absolute;
+      top: 6px;
+      right: 10px; }
+    .jumbotron .movie-container:hover {
+      cursor: pointer; }
   .jumbotron h1 {
     font-weight: 600; }
   .jumbotron h1, .jumbotron p {

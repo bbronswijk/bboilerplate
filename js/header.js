@@ -7,6 +7,20 @@ jQuery(document).ready(function($) {
 	$jumbotron.find('p,h1').delay(500).show();
 	$jumbotron.find('.btn').delay(500).css('display','inline-block');
 	
+	$movieBtn = $jumbotron.find('#watch-movie-btn');
+	$movieContainer = $jumbotron.find('.movie-container');
+	$movieIframe = $jumbotron.find('iframe');
+	
+	$movieBtn.on('click',function(){
+		$movieContainer.fadeIn();
+		
+	});
+	
+	$movieContainer.on('click',function(){
+		$(this).fadeOut();
+		 $('iframe').attr('src', $('iframe').attr('src'));
+	});
+	
 	/* SCROLLING */
 	$header = $('header');
 	$adminbar = $('#wpadminbar');

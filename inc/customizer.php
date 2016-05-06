@@ -128,6 +128,13 @@ class MyTheme_Customize {
          ) 
       );  
 	  
+	  $wp_customize->add_setting( 'banner_movie', 
+         array(
+            'default' => '#', 
+            'type' => 'theme_mod'
+         ) 
+      );  
+	  
 	  $wp_customize->add_setting( 'callto_text', 
          array(
             'default' => 'are you ready for awesomeness? this is a call to action', 
@@ -261,6 +268,17 @@ class MyTheme_Customize {
             'label' => __( 'Button redirect URL', 'mytheme' ), 
             'section' => 'banner_section', 
             'settings' => 'banner_btn_url', 
+            'priority' => 10
+         ) 
+	  ) );
+	  	  
+	  $wp_customize->add_control( new WP_Customize_Control( 
+         $wp_customize, 
+         'banner_movie',
+         array(
+            'label' => __( 'Movie', 'mytheme' ), 
+            'section' => 'banner_section', 
+            'settings' => 'banner_movie', 
             'priority' => 10
          ) 
 	  ) );
