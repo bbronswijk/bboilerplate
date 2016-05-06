@@ -28,6 +28,13 @@
 		  )
 	  );
 	} add_action( 'init', 'register_my_menus' );
+	
+	// remove unecessary menu items;
+	function custom_menu_page_removing() {
+	    remove_menu_page( 'edit.php' );
+		remove_menu_page( 'edit-comments.php' );
+	}
+	add_action( 'admin_menu', 'custom_menu_page_removing' );
 
 	// editor style	
 	add_editor_style( array('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css','style.css') );
