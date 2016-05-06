@@ -149,6 +149,14 @@ class MyTheme_Customize {
             'type' => 'theme_mod',
             'transport' => 'postMessage'  
          ) 
+      );   
+	  
+	  $wp_customize->add_setting( 'callto_link', 
+         array(
+            'default' => '#', 
+            'type' => 'theme_mod',
+            'transport' => 'postMessage'  
+         ) 
       );     
 	    
 	  
@@ -428,7 +436,19 @@ class MyTheme_Customize {
             'priority' => 10
          ) 
 	  ) );
-		      
+	  
+	  $wp_customize->add_control( new WP_Customize_Control( 
+         $wp_customize, 
+         'callto_link',
+         array(
+            'label' => __( 'Button URL', 'mytheme' ), 
+            'section' => 'callto_section', 
+            'settings' => 'callto_link', 
+            'priority' => 10
+         ) 
+	  ) );
+		 
+	
       //4. We can also change built-in settings by modifying properties. For instance, let's make some stuff use live preview JS...
       //$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
       //$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';

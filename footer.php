@@ -6,7 +6,7 @@
 					
 				</div>
 				<div class="col-md-3 col-md-offset-1">
-					<a class="btn btn-primary btn-lg call-btn"><?php echo get_theme_mod( 'callto_btn_text', 'purchase now' ); ?></a>
+					<a href="<?php echo get_theme_mod( 'callto_link', '#' ); ?>" class="btn btn-primary btn-lg call-btn"><?php echo get_theme_mod( 'callto_btn_text', 'purchase now' ); ?></a>
 				</div>
 			</div>
 		</div>
