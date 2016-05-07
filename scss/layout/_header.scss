@@ -86,7 +86,7 @@ header{
         padding: 8px 15px;
       } 
     }
-    @media screen and (max-width: $breakpoint-wp) {
+    @media screen and (max-width: $breakpoint-sm) {
       padding: 15px;
     }
   }
@@ -97,13 +97,13 @@ header{
 body.admin-bar header{
   top: 32px;
   
-  @media screen and (max-width: $breakpoint-wp) {
+  @media screen and (max-width: $breakpoint-sm) {
     top: 46px;
   }
 }
         
 .navbar-collapse.collapse, .navbar-collapse.collapsing {
-  @media screen and (max-width: calc( $breakpoint-wp + 30px) ) {
+  @media screen and (max-width: $breakpoint-sm ) {
     position: fixed;
     background: hsla(1,0%,100%,.9);
     top: 96px;
@@ -119,13 +119,13 @@ body.admin-bar header{
   }
   
   .menu-item{
-    @media screen and (max-width: calc( $breakpoint-wp + 30px) ) {
+    @media screen and (max-width: $breakpoint-sm ) {
       border-bottom: 1px solid #e3e3e3;
     }
   }
   
   .menu-item:first-child{
-    @media screen and (max-width: calc( $breakpoint-wp + 30px) ) {
+    @media screen and (max-width: $breakpoint-sm ) {
       border-top: 1px solid #e3e3e3;
     }
   }

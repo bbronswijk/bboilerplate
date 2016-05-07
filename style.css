@@ -252,17 +252,17 @@ header {
         background: #394B6F; }
       header .navbar li.menu-item a {
         padding: 8px 15px; }
-    @media screen and (max-width: 782px) {
+    @media screen and (max-width: 767px) {
       header .navbar {
         padding: 15px; } }
 
 body.admin-bar header {
   top: 32px; }
-  @media screen and (max-width: 782px) {
+  @media screen and (max-width: 767px) {
     body.admin-bar header {
       top: 46px; } }
 
-@media screen and (max-width: calc( $breakpoint-wp + 30px)) {
+@media screen and (max-width: 767px) {
   .navbar-collapse.collapse, .navbar-collapse.collapsing {
     position: fixed;
     background: rgba(255, 255, 255, 0.9);
@@ -276,10 +276,10 @@ body.admin-bar header {
     text-align: center;
     font-weight: bold;
     top: 90px; } }
-@media screen and (max-width: calc( $breakpoint-wp + 30px)) {
+@media screen and (max-width: 767px) {
   .navbar-collapse.collapse .menu-item, .navbar-collapse.collapsing .menu-item {
     border-bottom: 1px solid #e3e3e3; } }
-@media screen and (max-width: calc( $breakpoint-wp + 30px)) {
+@media screen and (max-width: 767px) {
   .navbar-collapse.collapse .menu-item:first-child, .navbar-collapse.collapsing .menu-item:first-child {
     border-top: 1px solid #e3e3e3; } }
 
@@ -293,7 +293,7 @@ body.admin-bar header {
   padding-top: 300px;
   overflow: hidden;
   position: relative; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .jumbotron {
       padding-top: 100px;
       text-align: center;
@@ -324,7 +324,7 @@ body.admin-bar header {
     text-shadow: 2px 2px 0px #707070; }
   .jumbotron .btn {
     display: none; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .jumbotron {
       margin-top: 40px; } }
 
@@ -440,7 +440,7 @@ body.admin-bar header {
       margin-left: calc( ( ( ( 100vw - 750px ) / 2 ) + 45px ) * -1 );
       padding-left: calc( ( ( 100vw - 750px ) / 2 ) + 45px );
       padding-right: calc( ( ( 100vw - 750px ) / 2 ) + 45px ); } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .inline-full-width {
       width: 100%;
       margin-left: -55px;
@@ -546,7 +546,7 @@ body.admin-bar header {
     list-style: none;
     float: left;
     margin-right: 10px; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .qtranxs_language_chooser {
       float: left;
       margin-top: -40px; } }
