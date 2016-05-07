@@ -86,6 +86,9 @@ function register_services_shortcode(){
 function embed_service_shortcode(){
 		
 	$args = array( 'post_type' => 'services' );
+	
+	ob_start();
+	
 	echo '<div id="services">';
 		echo '<div class="row">';
 	
@@ -106,5 +109,10 @@ function embed_service_shortcode(){
 				
 		echo '</div>';
 	echo '</div>';
+	
+	$output_string = ob_get_contents();
+	ob_end_clean();
+	
+	return $output_string;
 		 
 }

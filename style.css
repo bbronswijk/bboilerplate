@@ -289,9 +289,8 @@ body.admin-bar header {
 
 .jumbotron {
   background-size: cover;
-  height: 500px;
-  margin-top: 90px;
-  padding-top: 160px;
+  height: 700px;
+  padding-top: 300px;
   overflow: hidden;
   position: relative; }
   @media screen and (max-width: 768px) {
@@ -304,7 +303,8 @@ body.admin-bar header {
     background: #000;
     text-align: center;
     width: 100%;
-    top: 90px; }
+    top: 0;
+    padding-top: 180px; }
     .jumbotron .movie-container:after {
       content: '\f00d';
       font-family: fontawesome;
@@ -415,10 +415,11 @@ body.admin-bar header {
 .inline-full-width {
   clear: both;
   color: #fff;
-  font-size: 24px;
+  font-size: 34px;
+  font-weight: 300;
   text-align: center;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 160px;
+  padding-bottom: 160px;
   background-position: center;
   background-size: cover;
   box-sizing: content-box;

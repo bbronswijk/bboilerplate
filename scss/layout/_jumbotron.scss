@@ -1,9 +1,8 @@
 // Jumbotron
 .jumbotron{
   background-size: cover;
-  height: 500px;
-  margin-top: 90px;
-  padding-top: 160px;
+  height: 700px;
+  padding-top: 300px;
   overflow:hidden;
   position: relative;
   
@@ -18,7 +17,8 @@
     background: #000;
     text-align: center;
     width: 100%;
-    top: 90px;
+    top:0;
+    padding-top: 180px;
     
     &:after{
       content: '\f00d';
