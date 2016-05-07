@@ -296,7 +296,8 @@ body.admin-bar header {
   @media screen and (max-width: 768px) {
     .jumbotron {
       padding-top: 100px;
-      text-align: center; } }
+      text-align: center;
+      height: 600px; } }
   .jumbotron .movie-container {
     display: none;
     position: absolute;
