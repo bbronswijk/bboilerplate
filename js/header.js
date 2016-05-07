@@ -21,6 +21,13 @@ jQuery(document).ready(function($) {
 		 $('iframe').attr('src', $('iframe').attr('src'));
 	});
 	
+	/* set viewport for small screens */
+	window.onload = function () {
+	    if(screen.width <= 500) {
+	        $('#viewport').attr('content','width=500');
+	    }
+	};
+	
 	/* SCROLLING */
 	$header = $('header');
 	$adminbar = $('#wpadminbar');
