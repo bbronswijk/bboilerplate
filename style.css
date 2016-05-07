@@ -275,7 +275,7 @@ body.admin-bar header {
     border: none;
     text-align: center;
     font-weight: bold;
-    top: 90px; } }
+    top: 35px; } }
 @media screen and (max-width: 767px) {
   .navbar-collapse.collapse .menu-item, .navbar-collapse.collapsing .menu-item {
     border-bottom: 1px solid #e3e3e3; } }
@@ -286,6 +286,10 @@ body.admin-bar header {
 @media screen and (max-width: 782px) {
   #wpadminbar {
     position: fixed; } }
+
+@media screen and (max-width: 767px) {
+  body.admin-bar .navbar-collapse.collapse, body.admin-bar .navbar-collapse.collapsing {
+    top: 90px; } }
 
 .jumbotron {
   background-size: cover;

@@ -115,7 +115,7 @@ body.admin-bar header{
     border: none;
     text-align: center;
     font-weight: bold;
-    top: 90px;
+    top: 35px;
   }
   
   .menu-item{
@@ -136,3 +136,9 @@ body.admin-bar header{
     position: fixed;
   }
 }
+
+body.admin-bar .navbar-collapse.collapse, body.admin-bar .navbar-collapse.collapsing{
+  @media screen and (max-width: $breakpoint-sm ) {
+    top: 90px;
+  }
+} 
