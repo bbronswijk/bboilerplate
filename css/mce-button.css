@@ -1,0 +1,33 @@
+i.mce-i-shortcode-generator:before {
+    font-family: "dashicons";
+    content: "\f468";
+}
+
+i.mce-i-call_to_action:before {
+    font-family: "dashicons";
+    content: "\f134";
+    font-size: 22px;
+    line-height: 20px;
+}
+
+
+i.mce-i-fa_includer{
+	line-height: 16px !important;
+}
+
+i.mce-i-fa_includer:before {
+    font-family: "fontawesome";
+    content: "\f286";
+    font-size: 18px;
+}
+
+.mce-container-body i.fa{
+	font-family: "fontawesome";
+	font-size: 24px;
+	margin: 0px 12px 16px 12px;
+	width: 20px;
+}
+
+.mce-container-body i.fa:hover{
+	cursor: pointer;
+}

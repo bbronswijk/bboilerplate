@@ -30,6 +30,12 @@
 		} );
 	} );
 	
+	wp.customize( 'banner_text_align', function( value ) {
+		value.bind( function( newval ) {			
+			$jumbotron.css( 'text-align', newval );
+		} );
+	} );
+	
 	// image position
 	wp.customize( 'banner_position', function( value ) {
 		value.bind( function( newval ) {			

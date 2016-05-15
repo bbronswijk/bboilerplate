@@ -19,7 +19,11 @@
 		wp_enqueue_script( 'bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', false, true );
 		wp_enqueue_script( 'header-js', get_template_directory_uri().'/js/header.js', false, true );		
 	} add_action( 'wp_enqueue_scripts', 'theme_enqueue_script' );
-
+	
+	function theme_admin_styles(){
+		wp_register_style( 'font-awesome-style', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' );		
+	} add_action( 'admin_enqueue_scripts', 'theme_admin_styles' );
+	
 	// register navigation menu 
     function register_my_menus() {
 	  register_nav_menus(
@@ -37,7 +41,7 @@
 	add_action( 'admin_menu', 'custom_menu_page_removing' );
 
 	// editor style	
-	add_editor_style( array('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css','style.css') );
+	add_editor_style( array('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css','style.css','https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css') );
 	
 	// enable header image
 	$args = array(
@@ -47,16 +51,39 @@
 	add_theme_support( 'custom-header', $args );
 	
 	// customizer settings
-	require_once('inc/customizer.php');
+	require_once 'inc/customizer.php';
 	
-	// register 
-	require_once('inc/services.php');
+	// register services plugin 
+	require_once 'inc/services.php';
 	
-	// register 
-	require_once('inc/dashboard.php');
+	// register shortcode generator
+	//require_once 'inc/shortcode-generator.php';
 	
-	// register 
-	require_once('inc/sidebar-option.php');
+	// register dashboard widget -> redirect to help.brambronswijk.com or small faq
+	require_once 'inc/dashboard.php';
+	
+	// register sidebar option for page editor
+	require_once 'inc/sidebar-option.php';
+	
+	// register font-awesome includer
+	require_once 'inc/fa-includer.php';
+	
+	// register call to action button
+	require_once 'inc/call-to-action.php';
+	
+	// support qtranslate
+	function myqtranxf_add_admin_filters() {
+		if (is_admin()) {
+			// Hooks (execution time critical filters)
+			add_filter('gettext', 'qtranxf_gettext', 0);
+			add_filter('gettext_with_context', 'qtranxf_gettext_with_context', 0);
+			add_filter('ngettext', 'qtranxf_ngettext', 0);
+		}
+	}
+	
+	if (is_plugin_active('qtranslate-x/qtranslate.php'))
+		myqtranxf_add_admin_filters();
+	
 		
 	//register sidebars
 	if ( function_exists('register_sidebar') ){

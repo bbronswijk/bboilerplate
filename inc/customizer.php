@@ -89,6 +89,14 @@ class MyTheme_Customize {
          ) 
       );   
 	  
+	  $wp_customize->add_setting( 'banner_text_align', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+         array(
+            'default' => 'left', //Default setting/value to save
+            'type' => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
+            'transport' => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
+         ) 
+      );   
+	  
 	  $wp_customize->add_setting( 'banner_textshadow', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
          array(
             'default' => 'none', //Default setting/value to save
@@ -209,7 +217,7 @@ class MyTheme_Customize {
       );  
 	        
       //3. DEFINE CONTROLS       
-       $wp_customize->add_control(
+      $wp_customize->add_control(
 			'main-font', 
 			array(
 				'label'    => __( 'Main Font', 'mytheme' ),
@@ -297,11 +305,26 @@ class MyTheme_Customize {
 				'label'    => __( 'Position', 'mytheme' ),
 				'section'  => 'banner_section',
 				'settings' => 'banner_position',
-				'type'     => 'radio',
+				'type'     => 'select',
 				'choices'  => array(
 					'top'  => 'top',
 					'center'  => 'center',
 					'bottom' => 'bottom'
+				),
+			)
+		);
+		
+		$wp_customize->add_control(
+			'main_text_align', 
+			array(
+				'label'    => __( 'Text Align', 'mytheme' ),
+				'section'  => 'banner_section',
+				'settings' => 'banner_text_align',
+				'type'     => 'select',
+				'choices'  => array(
+					'left'  => 'left',
+					'center'  => 'center',
+					'right' => 'right'
 				),
 			)
 		);
@@ -312,7 +335,7 @@ class MyTheme_Customize {
 				'label'    => __( 'Text Shadow', 'mytheme' ),
 				'section'  => 'banner_section',
 				'settings' => 'banner_textshadow',
-				'type'     => 'radio',
+				'type'     => 'select',
 				'choices'  => array(
 					'none'  => 'none',
 					'2px 2px 0px #707070'  => 'black',
@@ -465,6 +488,7 @@ class MyTheme_Customize {
       	   <?php self::generate_css('*', 'font-family', 'main-font',"'","',sans-serif"); ?> 
            <?php self::generate_css('.jumbotron', 'background-image', 'banner_image','url(',')'); ?> 
            <?php self::generate_css('.jumbotron', 'background-position', 'banner_position'); ?> 
+           <?php self::generate_css('.jumbotron', 'text-align', 'banner_text_align'); ?> 
            <?php self::generate_css('.jumbotron h1', 'color', 'banner_textcolor'); ?> 
            <?php self::generate_css('.jumbotron p', 'color', 'banner_textcolor'); ?> 
            <?php self::generate_css('.jumbotron h1', 'text-shadow', 'banner_textshadow'); ?> 
