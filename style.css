@@ -430,6 +430,15 @@ body.admin-bar header {
   margin-left: calc( ( ( ( 100vw - 1140px ) / 2 ) + 45px ) * -1 );
   padding-left: calc( ( ( 100vw - 1140px ) / 2 ) + 45px );
   padding-right: calc( ( ( 100vw - 1140px ) / 2 ) + 45px ); }
+  .inline-full-width p {
+    color: inherit; }
+    .inline-full-width p i {
+      color: inherit; }
+      .inline-full-width p i:before {
+        color: inherit;
+        font-family: 'fontawesome'; }
+  .inline-full-width i {
+    color: inherit; }
   @media screen and (max-width: 1200px) {
     .inline-full-width {
       width: 860px;

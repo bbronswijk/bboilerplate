@@ -235,7 +235,7 @@ class MyTheme_Customize {
 	  // BANNER
       $wp_customize->add_control( new WP_Customize_Image_Control( 
          $wp_customize, //Pass the $wp_customize object (required)
-         'mytheme_link_textcolor', //Set a unique ID for the control
+         'banner_image', //Set a unique ID for the control
          array(
             'label' => __( 'Image', 'mytheme' ), //Admin-visible name of the control
             'section' => 'banner_section', //ID of the section this control should render in (can be one of yours, or a WordPress default section)

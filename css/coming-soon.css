@@ -1,0 +1,24 @@
+#coming-soon {
+	top: 0;
+	left: 0;
+	padding-top: 20vh;
+	height: 100vh;
+    width: 100%;
+	text-align: center;
+	background-position: center;
+	background-size: cover;
+}
+
+#coming-soon .header-logo{
+	width: 300px;
+	height: auto;
+}
+
+#coming-soon h1{
+	font-size: 30px;
+}
+
+.comingsoon_admin_bar{
+	background: #D70000 !important;
+	font-weight: bold !important;
+}

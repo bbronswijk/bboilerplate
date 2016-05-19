@@ -6,6 +6,9 @@ class CallToAction{
 	 function __construct(){       
         if ( is_admin() ){
             add_action('admin_head', array( $this, 'admin_head') );
+        } else{
+        	$this->load_dependencies();
+        	$this->register_shortcodes();
         }
     }
 
@@ -18,7 +21,18 @@ class CallToAction{
             add_filter( 'mce_buttons', array($this, 'mce_buttons' ) );
         }
     }
-
+	
+	// loads all the external files
+	private function load_dependencies(){
+		require_once 'class-cta-shortcode.php';
+	}
+	
+	// register the [ call_to_action ]
+	private function register_shortcodes(){		
+		$shortcode = new CTA_Shortcode();		
+		add_shortcode('call_to_action',array( $shortcode,'output_shortcode') );
+	}
+	
     function mce_external_plugins( $plugin_array ) {
         $plugin_array[$this->button_tag] = get_template_directory_uri() . '/js/call_to_action.js';
         return $plugin_array;

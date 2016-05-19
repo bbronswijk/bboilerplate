@@ -60,6 +60,7 @@
 	//require_once 'inc/shortcode-generator.php';
 	
 	// register dashboard widget -> redirect to help.brambronswijk.com or small faq
+	// nieuwe features per versie
 	require_once 'inc/dashboard.php';
 	
 	// register sidebar option for page editor
@@ -71,6 +72,9 @@
 	// register call to action button
 	require_once 'inc/call-to-action.php';
 	
+	// register call to action button
+	require_once 'inc/coming-soon.php';
+	
 	// support qtranslate
 	function myqtranxf_add_admin_filters() {
 		if (is_admin()) {
@@ -81,9 +85,10 @@
 		}
 	}
 	
-	if (is_plugin_active('qtranslate-x/qtranslate.php'))
-		myqtranxf_add_admin_filters();
-	
+	// check if qtranslate is active
+	function check_qtranslate_plugin() {
+		if (is_plugin_active('qtranslate-x/qtranslate.php')) myqtranxf_add_admin_filters();
+	}	add_action( 'admin_init', 'check_qtranslate_plugin' );
 		
 	//register sidebars
 	if ( function_exists('register_sidebar') ){

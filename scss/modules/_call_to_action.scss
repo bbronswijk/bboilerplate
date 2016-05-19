@@ -35,6 +35,22 @@
   padding-left: calc( ( ( 100vw - 1140px ) / 2 ) + 45px );
   padding-right: calc( ( ( 100vw - 1140px ) / 2 ) + 45px );
   
+  p{
+    color: inherit;
+    i{
+      color: inherit;
+      
+      &:before{
+        color: inherit;
+        font-family: 'fontawesome';
+      }
+    }
+  }
+  
+  i{
+    color: inherit;
+  }
+  
   @media screen and (max-width: $breakpoint-lg) {  
     width: 860px;
     margin-left: calc( ( ( ( 100vw - 940px ) / 2 ) + 45px ) * -1 );
