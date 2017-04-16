@@ -1,52 +1,39 @@
-// Big Advertisement
+// Pricing table
 .pricing-table{
-  margin-top: 60px;
-  
+    
   tbody{
     padding: 0;
-    border: 1px solid #ddd;
     
     tr{
       width: 100%;
-      display: inline-table;
           
-      td{
-        padding: 30px;
+      td{    
+        padding: 20px 30px;  
+        vertical-align: middle;
+        h1, h2, h3, h4, h5, h6{
+          margin: 0;
+          font-weight: bold;
+        } 
         
-        span{
-          font-size: 16px;
-          font-weight: normal;
-          margin-left: 10px;
+        ul{
+          padding-left: 25px;
         }
-        
+        li{
+          list-style: none;
+          
+          &:before{
+            content: '\f00c';
+            font-family: fontawesome;
+            position: absolute;
+            margin-left: -25px;
+          }
+        } 
+             
         i{
           color: $primary-color;
         }
         
       }
-    }
-    
-    tr:nth-child(1){
-      td{
-        font-weight: bold;
-        font-size: 32px;
-      }
-    }
-    
-    tr:nth-child(2){
-      td{
-        padding: 20px 30px;
-        font-weight: bold;
-        font-size: 24px;
-        text-transform: capitalize;        
-      }
-    }
-    
-    tr:nth-child(3){
-      td{
-        line-height: 28px;
-        padding: 30px 30px 10px 30px;
-      }      
     }
     
   }

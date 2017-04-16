@@ -9,7 +9,7 @@
 						'add_new_item' => __( 'Add New Service', 'my-theme' ),
 						'not_found' => __( 'No Services Found', 'my-theme' ),
 					),
-					'menu_icon'=> 'dashicons-tag',
+					'menu_icon'=> 'dashicons-paperclip',
 					'public' => true,
 					'supports' => array( 'title', 'editor', 'thumbnail' ),
 					'has_archive' => true,
@@ -99,8 +99,8 @@ function embed_service_shortcode(){
 					$title = get_the_title();
 				
 					echo '<div class="col-md-4">';					
-						
-						echo '<div class="service-icon"><i class="fa fa-'.$icon.'"></i></div>';
+						if( !empty($icon) )
+							echo '<div class="service-icon"><i class="fa fa-'.$icon.'"></i></div>';
 						echo '<h1 class="service-title">'.$title.'</h1>';
 						echo '<p class="service-desc">'.the_content().'</p>';
 						

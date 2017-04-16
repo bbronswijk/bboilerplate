@@ -44,6 +44,7 @@
     display: none;
     color: #fff;
     text-shadow: 2px 2px 0px #707070;
+    font-weight: 600;
   }
   
   .btn{
@@ -52,5 +53,13 @@
    
   @media screen and (max-width: $breakpoint-sm) {
     margin-top: 40px;
+  }
+}
+
+.jumbotron.full{
+  height: 100vh;
+  .movie-container{
+    height: 100vh;
+    z-index: 10;
   }
 }

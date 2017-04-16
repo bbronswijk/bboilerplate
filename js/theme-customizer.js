@@ -59,31 +59,7 @@
 		} );
 	} );
 	
-	// phonenumber header
-	wp.customize( 'promo_phone', function( value ) {
-		value.bind( function( newval ) {
-			if( newval.length ){
-				$('.header-phone').closest('a').show();
-				$('.header-phone').text( newval );
-			} else{
-				$('.header-phone').closest('a').hide();
-			}		
-			
-		} );
-	} );
-	
-	// email header
-	wp.customize( 'promo_email', function( value ) {
-		value.bind( function( newval ) {				
-			if( newval.length ){
-				$('.header-email').closest('a').show();
-				$('.header-email').text( newval );
-			} else{
-				$('.header-email').closest('a').hide();
-			}
-		} );
-	} );
-	
+		
 	$calltoaction = $('.call-to-action');
 	
 	// call to action button

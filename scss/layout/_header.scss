@@ -40,13 +40,14 @@ header{
       box-sizing: content-box;
       .helper{
         height: 100%;
+        width: 1%;
         vertical-align: middle;
         display: inline-block;
       }
-      .header-logo{
+      img{
         display: inline-block;
         vertical-align: middle;
-        max-width: 100%;
+        max-width: 97%;
         
         width: auto;
         max-height: 100%; 
@@ -55,31 +56,133 @@ header{
     }
     nav{
       margin: 25px 0;
-    }
-    .current-menu-item{
-        background: $primary-color;
-        border-radius: 20px;
-        
-        &:hover a{
-          color: #fff !important;
+      
+      li.menu-item{
+        list-style: none;
+        text-decoration: none;
+        &:hover > ul{
+          max-height:500px;
         }
-        
         a{
-          color: #fff !important;
+          @media screen and (max-width: $breakpoint-sm ) {
+            color: $text-color;
+            &:hover{
+              color: $text-color;
+              opacity: 0.8;
+            }
+          }
         }
+      }
+      
+      li.menu-item-has-children{
+        @media screen and (min-width: $breakpoint-sm ) {
+          padding-right: 15px;
+        }
+      }
+      
+      li.menu-item-has-children:after{
+        content: '\f107';
+        font-family: fontawesome;
+        position: absolute;
+        right: 10px;
+        top: 7px;
+      }
+      
+      ul ul {
+         @media screen and (max-width: $breakpoint-sm ) {
+           padding: 0;
+         }
+        li{
+           @media screen and (max-width: $breakpoint-sm ) {
+             padding: 8px 15px;
+           }
+        }
+      }
+      
+      
+      @media screen and (min-width: $breakpoint-sm ) {
+        ul ul{
+          z-index:10;
+          position:absolute;
+          background: $primary-color;
+          margin-top:3px;
+          margin-left:-20px;
+          overflow:hidden;
+          max-height:0;
+          padding:0 20px;
+          opacity: 0.8;
+          
+          -webkit-transition: max-height 0.5s ease-in-out;
+           -moz-transition: max-height 0.5s ease-in-out;
+           -o-transition: max-height 0.5s ease-in-out;
+           -ms-transition: max-height 0.5s ease-in-out;
+           transition: max-height 0.5s ease-in-out;
+            
+           transition: 0.2s ease-in;
+          transition-delay: 0.2s;
+          -moz-transition-delay: 0.2s;
+          -webkit-transition-delay: 0.2s;
+          -o-transition-delay: 0.2s;
+          
+          li.menu-item:last-child{
+            margin-bottom: 10px;
+          }
+          
+          li.menu-item{
+            margin:0;
+            padding:7px 10px 5px 10px;
+            float:none;
+            min-width:80px;
+            border-bottom:2px solid transparent;
+            
+            &:hover {
+              border-radius: 0;
+              border-color: #fff;
+            }
+            
+            &:hover > a{
+              text-decoration: none;
+              border-radius: 0;
+            }
+            
+            a{
+              font-size:14px;            
+              color: #fff;
+            }
+            
+          }
+        }
+   
+        .current-menu-item{
+            background: $primary-color;
+            border-radius: 20px;
+            
+            &:hover a{
+              color: #fff;
+            }
+            
+            a{
+              color: #fff;
+            }
+        }
+      }
     }
     
     li.menu-item{
       color: #fff;
       margin: 7px;
       
-      &:hover a{        
-        color: #fff !important;
+      &:hover a{
+        @media screen and (min-width: $breakpoint-sm ) {        
+          color: #fff;
+        }
       }
       
       &:hover{
-        border-radius: 20px;
-        background: $primary-color;        
+        @media screen and (min-width: $breakpoint-sm ) {
+          border-radius: 20px;
+          background: $primary-color;  
+        }      
       }
       
       a{
@@ -92,7 +195,34 @@ header{
   }
 }
 
+header.full{
+  .navbar{
+    background: none;
+    border-bottom: none;
+    .current-menu-item{
+      background: none;
+      border-radius: 0px;
+      border-bottom: 2px solid #fff;
+    }
+    .menu-item{
+      &:hover{
+        background: none;
+        border-radius: 0px;
+        border-bottom: 2px solid #fff;
+      }
+    }
+  }
+  
+  .navbar-nav>li>a{
+    color: #fff;
+  }
+}
 
+header.full.collapsed{
+  .navbar{
+    background: $primary-color;
+  }
+}
         
 body.admin-bar header{
   top: 32px;

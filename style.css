@@ -1,13 +1,14 @@
 /*
-Theme Name:       BBoilerplate Theme
-Theme URI:        http://brambronswijk.com/bboilerplate/
-GitHub Theme URI: bbronswijk/bboilerplate
-Description:      Standaard theme bronswijk
-Author:           Bram Bronswijk   
-Author URI:       http://brambronswijk.com
-Version:          0.8
-License:          GNU General Public License v2 or later
-License URI:      http://www.gnu.org/licenses/gpl-2.0.html
+*	Theme Name:       	BBoilerplate
+*	Theme URI:        	http://brambronswijk.com/
+*	GitHub Theme URI: 	bbronswijk/bboilerplate
+*	Description:      	Standaard Worpdress theme gemaakt door Bram Bronswijk
+*	Author:           	Bram Bronswijk   
+*	Author URI:       	http://brambronswijk.com
+*	Version:          	0.8
+*	License:          	GNU General Public License v2 or later
+*	License URI:      	http://www.gnu.org/licenses/gpl-2.0.html
+*	Tags:				Bootstrap, FontAwesome, Animate.css, jQuery, sccs, OpenSans, Roboto, FiraSans			
 */
 /* BASE - Base styles, variables, mixins, etc */
 * {
@@ -224,37 +225,121 @@ header {
       box-sizing: content-box; }
       header .navbar .logo-link .helper {
         height: 100%;
+        width: 1%;
         vertical-align: middle;
         display: inline-block; }
-      header .navbar .logo-link .header-logo {
+      header .navbar .logo-link img {
         display: inline-block;
         vertical-align: middle;
-        max-width: 100%;
+        max-width: 97%;
         width: auto;
         max-height: 100%;
         height: auto; }
     header .navbar nav {
       margin: 25px 0; }
-    header .navbar .current-menu-item {
-      background: #394B6F;
-      border-radius: 20px; }
-      header .navbar .current-menu-item:hover a {
-        color: #fff !important; }
-      header .navbar .current-menu-item a {
-        color: #fff !important; }
+      header .navbar nav li.menu-item {
+        list-style: none;
+        text-decoration: none; }
+        header .navbar nav li.menu-item:hover > ul {
+          max-height: 500px; }
+        @media screen and (max-width: 767px) {
+          header .navbar nav li.menu-item a {
+            color: #31383E; }
+            header .navbar nav li.menu-item a:hover {
+              color: #31383E;
+              opacity: 0.8; } }
+      @media screen and (min-width: 767px) {
+        header .navbar nav li.menu-item-has-children {
+          padding-right: 15px; } }
+      header .navbar nav li.menu-item-has-children:after {
+        content: '\f107';
+        font-family: fontawesome;
+        position: absolute;
+        right: 10px;
+        top: 7px; }
+      @media screen and (max-width: 767px) {
+        header .navbar nav ul ul {
+          padding: 0; } }
+      @media screen and (max-width: 767px) {
+        header .navbar nav ul ul li {
+          padding: 8px 15px; } }
+      @media screen and (min-width: 767px) {
+        header .navbar nav ul ul {
+          z-index: 10;
+          position: absolute;
+          background: #394B6F;
+          margin-top: 3px;
+          margin-left: -20px;
+          overflow: hidden;
+          max-height: 0;
+          padding: 0 20px;
+          opacity: 0.8;
+          -webkit-transition: max-height 0.5s ease-in-out;
+          -moz-transition: max-height 0.5s ease-in-out;
+          -o-transition: max-height 0.5s ease-in-out;
+          -ms-transition: max-height 0.5s ease-in-out;
+          transition: max-height 0.5s ease-in-out;
+          transition: 0.2s ease-in;
+          transition-delay: 0.2s;
+          -moz-transition-delay: 0.2s;
+          -webkit-transition-delay: 0.2s;
+          -o-transition-delay: 0.2s; }
+          header .navbar nav ul ul li.menu-item:last-child {
+            margin-bottom: 10px; }
+          header .navbar nav ul ul li.menu-item {
+            margin: 0;
+            padding: 7px 10px 5px 10px;
+            float: none;
+            min-width: 80px;
+            border-bottom: 2px solid transparent; }
+            header .navbar nav ul ul li.menu-item:hover {
+              border-radius: 0;
+              border-color: #fff; }
+            header .navbar nav ul ul li.menu-item:hover > a {
+              text-decoration: none;
+              border-radius: 0; }
+            header .navbar nav ul ul li.menu-item a {
+              font-size: 14px;
+              color: #fff; }
+        header .navbar nav .current-menu-item {
+          background: #394B6F;
+          border-radius: 20px; }
+          header .navbar nav .current-menu-item:hover a {
+            color: #fff; }
+          header .navbar nav .current-menu-item a {
+            color: #fff; } }
     header .navbar li.menu-item {
       color: #fff;
       margin: 7px; }
-      header .navbar li.menu-item:hover a {
-        color: #fff !important; }
-      header .navbar li.menu-item:hover {
-        border-radius: 20px;
-        background: #394B6F; }
+      @media screen and (min-width: 767px) {
+        header .navbar li.menu-item:hover a {
+          color: #fff; } }
+      @media screen and (min-width: 767px) {
+        header .navbar li.menu-item:hover {
+          border-radius: 20px;
+          background: #394B6F; } }
       header .navbar li.menu-item a {
         padding: 8px 15px; }
     @media screen and (max-width: 767px) {
       header .navbar {
         padding: 15px; } }
+
+header.full .navbar {
+  background: none;
+  border-bottom: none; }
+  header.full .navbar .current-menu-item {
+    background: none;
+    border-radius: 0px;
+    border-bottom: 2px solid #fff; }
+  header.full .navbar .menu-item:hover {
+    background: none;
+    border-radius: 0px;
+    border-bottom: 2px solid #fff; }
+header.full .navbar-nav > li > a {
+  color: #fff; }
+
+header.full.collapsed .navbar {
+  background: #394B6F; }
 
 body.admin-bar header {
   top: 32px; }
@@ -325,12 +410,19 @@ body.admin-bar header {
   .jumbotron h1, .jumbotron p {
     display: none;
     color: #fff;
-    text-shadow: 2px 2px 0px #707070; }
+    text-shadow: 2px 2px 0px #707070;
+    font-weight: 600; }
   .jumbotron .btn {
     display: none; }
   @media screen and (max-width: 767px) {
     .jumbotron {
       margin-top: 40px; } }
+
+.jumbotron.full {
+  height: 100vh; }
+  .jumbotron.full .movie-container {
+    height: 100vh;
+    z-index: 10; }
 
 .page-wrapper {
   background: #f9f9f9;
@@ -492,63 +584,57 @@ body.admin-bar header {
   max-width: 760px !important;
   margin: 30px 40px !important; }
 
-.pricing-table {
-  margin-top: 60px; }
-  .pricing-table tbody {
-    padding: 0;
-    border: 1px solid #ddd; }
-    .pricing-table tbody tr {
-      width: 100%;
-      display: inline-table; }
-      .pricing-table tbody tr td {
-        padding: 30px; }
-        .pricing-table tbody tr td span {
-          font-size: 16px;
-          font-weight: normal;
-          margin-left: 10px; }
-        .pricing-table tbody tr td i {
-          color: #394B6F; }
-    .pricing-table tbody tr:nth-child(1) td {
-      font-weight: bold;
-      font-size: 32px; }
-    .pricing-table tbody tr:nth-child(2) td {
+.pricing-table tbody {
+  padding: 0; }
+  .pricing-table tbody tr {
+    width: 100%; }
+    .pricing-table tbody tr td {
       padding: 20px 30px;
-      font-weight: bold;
-      font-size: 24px;
-      text-transform: capitalize; }
-    .pricing-table tbody tr:nth-child(3) td {
-      line-height: 28px;
-      padding: 30px 30px 10px 30px; }
-  .pricing-table tbody.highlighted {
-    overflow: hidden;
-    position: relative;
-    box-sizing: border-box;
-    box-shadow: 0px 6px 15px 1px rgba(0, 0, 0, 0.15);
-    border-top: 13px solid #394B6F;
-    margin-top: -20px; }
-    .pricing-table tbody.highlighted:before {
-      content: 'recommended';
-      color: #fff;
-      font-size: 12px;
-      right: -32px;
-      font-weight: bold;
-      margin-top: 16px;
-      padding: 7px;
-      width: 160px;
-      text-align: center;
-      position: absolute;
-      background: #394B6F;
-      -webkit-transform: rotate(35deg);
-      -ms-transform: rotate(35deg);
-      -o-transform: rotate(35deg);
-      transform: rotate(35deg); }
-      @media screen and (max-width: 992px) {
-        .pricing-table tbody.highlighted:before {
-          display: none; } }
-    .pricing-table tbody.highlighted tr:first-child td {
-      padding-top: 34px; }
-    .pricing-table tbody.highlighted tr:last-child td {
-      padding-bottom: 26px; }
+      vertical-align: middle; }
+      .pricing-table tbody tr td h1, .pricing-table tbody tr td h2, .pricing-table tbody tr td h3, .pricing-table tbody tr td h4, .pricing-table tbody tr td h5, .pricing-table tbody tr td h6 {
+        margin: 0;
+        font-weight: bold; }
+      .pricing-table tbody tr td ul {
+        padding-left: 25px; }
+      .pricing-table tbody tr td li {
+        list-style: none; }
+        .pricing-table tbody tr td li:before {
+          content: '\f00c';
+          font-family: fontawesome;
+          position: absolute;
+          margin-left: -25px; }
+      .pricing-table tbody tr td i {
+        color: #394B6F; }
+.pricing-table tbody.highlighted {
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  box-shadow: 0px 6px 15px 1px rgba(0, 0, 0, 0.15);
+  border-top: 13px solid #394B6F;
+  margin-top: -20px; }
+  .pricing-table tbody.highlighted:before {
+    content: 'recommended';
+    color: #fff;
+    font-size: 12px;
+    right: -32px;
+    font-weight: bold;
+    margin-top: 16px;
+    padding: 7px;
+    width: 160px;
+    text-align: center;
+    position: absolute;
+    background: #394B6F;
+    -webkit-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    -o-transform: rotate(35deg);
+    transform: rotate(35deg); }
+    @media screen and (max-width: 992px) {
+      .pricing-table tbody.highlighted:before {
+        display: none; } }
+  .pricing-table tbody.highlighted tr:first-child td {
+    padding-top: 34px; }
+  .pricing-table tbody.highlighted tr:last-child td {
+    padding-bottom: 26px; }
 
 .qtranxs_language_chooser {
   padding: 0;
